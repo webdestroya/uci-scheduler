@@ -1,0 +1,14 @@
+db/*.sqlite3
+log/*.log
+tmp/**/*
+test/**/*
+test
+doc
+log
+public/**/*.less
+README.md
+spec
+spec/**/*
+.env
+.rspec
+Guardfile

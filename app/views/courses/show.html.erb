@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Term:</b>
+  <%= @course.term_id %>
+</p>
+
+<p>
+  <b>Ccode:</b>
+  <%= @course.ccode %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @course.type %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @course.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @course.end_time %>
+</p>
+
+<p>
+  <b>Monday:</b>
+  <%= @course.monday %>
+</p>
+
+<p>
+  <b>Tuesday:</b>
+  <%= @course.tuesday %>
+</p>
+
+<p>
+  <b>Wednesday:</b>
+  <%= @course.wednesday %>
+</p>
+
+<p>
+  <b>Thursday:</b>
+  <%= @course.thursday %>
+</p>
+
+<p>
+  <b>Friday:</b>
+  <%= @course.friday %>
+</p>
+
+<p>
+  <b>Saturday:</b>
+  <%= @course.saturday %>
+</p>
+
+<p>
+  <b>Sunday:</b>
+  <%= @course.sunday %>
+</p>
+
+<p>
+  <b>Teacher:</b>
+  <%= @course.teacher %>
+</p>
+
+<p>
+  <b>Building:</b>
+  <%= @course.building_id %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @course.room %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

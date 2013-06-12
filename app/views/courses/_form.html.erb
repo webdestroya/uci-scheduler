@@ -1,0 +1,24 @@
+<%= simple_form_for(@course) do |f| %>
+  <%= f.error_notification %>
+
+  
+    <%= f.input :term_id %>
+    <%= f.input :ccode %>
+    <%= f.input :type %>
+    <%= f.input :start_time %>
+    <%= f.input :end_time %>
+    <%= f.input :monday %>
+    <%= f.input :tuesday %>
+    <%= f.input :wednesday %>
+    <%= f.input :thursday %>
+    <%= f.input :friday %>
+    <%= f.input :saturday %>
+    <%= f.input :sunday %>
+    <%= f.input :teacher %>
+    <%= f.input :building_id %>
+    <%= f.input :room %>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

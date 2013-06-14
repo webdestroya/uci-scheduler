@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Term:</b>
+  <%= @search.term_id %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @search.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @search.end_time %>
+</p>
+
+<p>
+  <b>Monday:</b>
+  <%= @search.monday %>
+</p>
+
+<p>
+  <b>Tuesday:</b>
+  <%= @search.tuesday %>
+</p>
+
+<p>
+  <b>Wednesday:</b>
+  <%= @search.wednesday %>
+</p>
+
+<p>
+  <b>Thursday:</b>
+  <%= @search.thursday %>
+</p>
+
+<p>
+  <b>Friday:</b>
+  <%= @search.friday %>
+</p>
+
+<p>
+  <b>Saturday:</b>
+  <%= @search.saturday %>
+</p>
+
+<p>
+  <b>Sunday:</b>
+  <%= @search.sunday %>
+</p>
+
+<p>
+  <b>Statuses:</b>
+  <%= @search.statuses %>
+</p>
+
+<p>
+  <b>Courses list:</b>
+  <%= @search.courses_list %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

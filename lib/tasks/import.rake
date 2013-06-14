@@ -29,9 +29,7 @@ namespace :import do
     end
   end
 
-  desc "Import courses"
-  task :courses => :environment do
-  end
+
 
   desc "Import list of buildings"
   task :buildings => :environment do

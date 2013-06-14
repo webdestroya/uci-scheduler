@@ -3,14 +3,20 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.integer   :term_id,         null: false
 
-      t.integer   :course_name_id,  null: false
+      t.integer   :parent_course_id
+
+      t.integer   :department_id,   null: false
+
+      t.string    :course_num,      null: false
+      t.string    :name,            null: false
 
       t.integer   :ccode,           null: false
 
+      t.string    :section,         null: false
       t.string    :type,            null: false, default: 'LEC', limit: 3
 
-      t.datetime  :start_time,      null: false
-      t.datetime  :end_time,        null: false
+      t.time      :start_time,      null: false
+      t.time      :end_time,        null: false
 
       t.boolean   :monday,          null: false, default: false
       t.boolean   :tuesday,         null: false, default: false
@@ -22,16 +28,17 @@ class CreateCourses < ActiveRecord::Migration
 
       t.string    :teacher,         null: false
 
-      t.integer   :building_id,     null: false
-      t.string    :room,            null: false
+      t.integer   :building_id
+      t.string    :room
 
       t.string    :status
 
       t.timestamps
     end
 
-    add_index :courses, :term_id
-    add_index :courses, :course_name_id
+    add_index :courses, [:term_id, :ccode], unique: true
+    add_index :courses, :department_id
+    add_index :courses, :course_num
     add_index :courses, :status
 
   end

@@ -60,3 +60,7 @@ gem 'psych'
 gem 'simple_form'
 
 gem 'nokogiri'
+
+gem 'chronic'
+
+gem 'active_attr'

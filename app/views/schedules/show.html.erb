@@ -1,0 +1,39 @@
+<% title "View Schedule" %>
+<% content_for :page_heading do %>
+<h1>View Schedule
+  <small>BLAH</small>
+</h1>
+<% end %>
+
+<h3>Schedule Info</h3>
+<table class="table table-bordered table-hover table-condensed">
+<thead>
+  <tr>
+    <th>Course</th>
+    <th>Code</th>
+    <th>Type</th>
+    <th>Instructor</th>
+    <th>Location</th>
+    <th>Time</th>
+    <th>Status</th>
+  </tr>
+</thead>
+<tbody>
+<% @courses.each do |course| %>
+<tr>
+  <td><%= course.department.code %> <%= course.course_num %></td>
+  <td><%= course.ccode %></td>
+  <td><%= course.type %></td>
+  <td><%= course.teacher %></td>
+  <td><% if course.building %>
+    <%= course.building.abbr %> <%= course.room %>
+    <% else %>
+    TBA
+    <% end %>
+  </td>
+  <td><%= course.days %> <%= course.meeting_time %></td>
+  <td><%= course.status %></td>
+</tr>
+<% end %>
+</tbody>
+</table>

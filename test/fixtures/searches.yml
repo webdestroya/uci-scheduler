@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  term_id: 1
+  start_time: 2013-06-13 15:21:39
+  end_time: 2013-06-13 15:21:39
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+  sunday: false
+  statuses: MyString
+  courses_list: MyText
+
+two:
+  term_id: 1
+  start_time: 2013-06-13 15:21:39
+  end_time: 2013-06-13 15:21:39
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+  sunday: false
+  statuses: MyString
+  courses_list: MyText

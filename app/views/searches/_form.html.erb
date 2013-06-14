@@ -1,0 +1,63 @@
+<%= simple_form_for(@search, html: {class: 'form-horizontal'}) do |f| %>
+  <%= f.error_notification %>
+
+  
+    <%= f.association :term, include_blank: false %>
+
+    <%= f.input :earliest_time,
+        as: :string,
+        hint: 'No classes will be earlier than this time',
+        placeholder: '8:00am',
+        input_html: {class: 'span2'} %>
+
+    <%= f.input :latest_time,
+        hint: 'No classes will be later than this time',
+        placeholder: '11:00pm',
+        input_html: {class: 'span2'} %>
+
+    <%= f.input :days,
+        collection: Search.day_list,
+        as: :check_boxes,
+        label_method: :last,
+        value_method: :first,
+        # hint: 'Select the days you wish to allow',
+        item_wrapper_class: 'inline' %>
+
+    <%= f.input :status_list,
+      collection: Search.status_list,
+      as: :check_boxes,
+      # hint: 'Select the status you wish to allow',
+      item_wrapper_class: 'inline' %>
+
+    <%= f.input :required_ccodes,
+      hint: 'Include any sections (5-digit code) that you want to require. Separate with commas.',
+      placeholder: '12345, 67890, ...',
+      input_html: {class: 'span4'}
+      %>
+
+      <h3>Courses</h3>
+
+      <%= f.simple_fields_for :search_courses do |c| %>
+      <div class="control-group controls controls-row course-search-row">
+        <%= c.input_field :department_id,
+          as: :select,
+          collection: Department.order('LOWER(code) ASC').all,
+          prompt: 'Select a Department',
+          label_method: :code,
+          class: 'span3'
+          %>
+        <%= c.input_field :course_num, class: 'span1' %>
+        <% if c.object.course_num %>
+        <span class="help-inline">
+          <%= c.object %>
+        </span>
+        <% else %>
+        <span class="help-inline"></span>
+        <% end %>
+      </div>
+      <% end %>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<h1>Listing searches</h1>
+
+<table>
+  <tr>
+    <th>Term</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+    <th>Statuses</th>
+    <th>Courses list</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @searches.each do |search| %>
+  <tr>
+    <td><%= search.term_id %></td>
+    <td><%= search.start_time %></td>
+    <td><%= search.end_time %></td>
+    <td><%= search.monday %></td>
+    <td><%= search.tuesday %></td>
+    <td><%= search.wednesday %></td>
+    <td><%= search.thursday %></td>
+    <td><%= search.friday %></td>
+    <td><%= search.saturday %></td>
+    <td><%= search.sunday %></td>
+    <td><%= search.statuses %></td>
+    <td><%= search.courses_list %></td>
+    <td><%= link_to 'Show', search %></td>
+    <td><%= link_to 'Edit', edit_search_path(search) %></td>
+    <td><%= link_to 'Destroy', search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Search', new_search_path %>

@@ -1,14 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>UciScheduler</title>
+  <meta charset="utf-8" />
+  <title><%= content_for?(:title) ? yield(:title) : "Home" %> | UCI Scheduler</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <%= favicon_link_tag 'favicon.ico' %>
+
+
+</head>
+<body id="pagebody">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<header>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">UCI Scheduler</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><%= link_to 'Make Schedule', '#' %></li>
+              <li><%= link_to 'Contact', contact_path %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+</header>
+
+<div class="container-fluid" id="content">
+
+  <div class="container">
+
+  <% if content_for?(:page_heading) || content_for?(:title) %>
+  <div class="page-header"><h1>
+    <% if content_for?(:page_heading) %>
+      <%= yield :page_heading %>
+    <% elsif content_for?(:title) %>
+      <%= yield :title %>
+    <% end %>
+  </h1></div>
+  <% end %>
+    
+  <%= yield %>
+
+  </div>
+
+</div>
+
+<div class="clear"></div>
+
+<footer>
+  <aside>&nbsp;</aside>
+  <div class="noprint row-fluid">
+    <div class="span4">
+      <b>MitchDB Player Database, MitchDB.com</b>
+    </div>
+    <div class="span4" style="text-align:center;">
+      Copyright &copy; <%= Time.now.year %> <a href="http://www.mitchdempsey.com/?utm_source=mitchdb&utm_medium=website&utm_campaign=footer">Mitch Dempsey</a>
+      <br/>All rights reserved.
+    </div>
+    <div class="span4">&nbsp;</div>
+  </div>
+</footer>
+
+
+
+
+<% if ::Rails.env.eql?("production") %>
+<script>
+    var _gaq=[['_setAccount','UA-7266115-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+<% end %>
 
 </body>
 </html>

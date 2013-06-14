@@ -1,0 +1,214 @@
+			UC Irvine Office of the Registrar
+		      Schedule of Classes    Thursday, June 13, 2013
+
+Search Criteria:
+    Department: I&C SCI
+    Exclude cancelled courses
+
+
+Fall Quarter, 2013      Registration for term ends on Monday, September 16, 2013
+
+
+   #########################################################################
+   ###                                                                   ###
+   ###      Donald Bren School of Information and Computer Sciences      ###
+   ###                                                                   ###
+   #########################################################################
+
+       _________________________________________________________________
+
+                      Information and Computer Science
+       _________________________________________________________________
+
+I&C Sci  3         INTERNET TECH & SOC
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36500 LEC A   4   MARK, G.      MW    6:00- 7:20p HH 178    139      75       0  88   0      OPEN   
+
+I&C Sci  5         ENVIR ISS INFO TECH
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36510 LEC A   4   TOMLINSON, W. TuTh  2:00- 3:20p ICS 174   131      93       0  94   0      OPEN   
+
+I&C Sci  6B        BOOLEAN ALG & LOGIC
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36520 LEC A   4   IRANI, S.     MWF   9:00- 9:50  PCB 1100  200     100       0 179 100 N    NewOnly
+    36521 DIS 1   0   IRANI, S.     Tu    5:00- 5:50p ICS 174   100      87       0  93   0      OPEN   
+    36522 DIS 2   0   IRANI, S.     Th    5:00- 5:50p ICS 174   100      13       0  13   0      OPEN   
+
+I&C Sci  6N        COMP LINEAR ALGEBRA
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36530 LEC A   4   IRANI, S.     MWF  11:00-11:50  HG 1800   130      65       6 176  65 N    NewOnly
+    36531 DIS 1   0   IRANI, S.     F     9:00- 9:50  ICS 192    35       7       0  18   0      OPEN   
+    36532 DIS 2   0   IRANI, S.     F    10:00-10:50  ICS 192    35      35       6  59   0      FULL   
+    36533 DIS 3   0   IRANI, S.     F     2:00- 2:50p ICS 192    30      15       0  31   0      OPEN   
+    36534 DIS 4   0   IRANI, S.     F     3:00- 3:50p ICS 192    30       8       0  18   0      OPEN   
+
+I&C Sci  7         INTRO COMP TOOLS
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36550 LEC A   4   PATTIS, R.    MWF  11:00-11:50  ICS 243    30      16       0  25   0      OPEN   
+    36551 DIS A   0   PATTIS, R.    TuTh  3:00- 4:50p ICS 192    30      16       0  18   0      OPEN   
+
+I&C Sci  31        INTRO TO PROGRMMING
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36590 LEC A   4   KAY, D.       TuTh  8:00- 9:20  ELH 100   245   25/25     n/a 134 220 N    NewOnly
+      ~ Same as 16100 (CSE 41, Lec A);  and 36100 (CSE 41, Lec A).
+    36595 LEC B   4   KAY, D.       TuTh 11:00-12:20p ELH 100   250   19/21     n/a 157 230 N    NewOnly
+      ~ Same as 16105 (CSE 41, Lec B);  and 36105 (CSE 41, Lec B).
+    36601 LAB 1   0   KAY, D.       MWF   8:00- 9:50  ICS 183    45     1/1     n/a   7   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16110 (CSE 41, Lab 1);  and 36111 (CSE 41, Lab 1).
+    36602 LAB 2   0   KAY, D.       MWF   8:00- 9:50  ICS 189    45     0/0     n/a   5   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16111 (CSE 41, Lab 2);  and 36112 (CSE 41, Lab 2).
+    36603 LAB 3   0   KAY, D.       MWF  10:00-11:50  ICS 183    45   11/12     n/a  22   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16112 (CSE 41, Lab 3);  and 36113 (CSE 41, Lab 3).
+    36604 LAB 4   0   KAY, D.       MWF  10:00-11:50  ICS 189    45     3/3     n/a  10   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16113 (CSE 41, Lab 4);  and 36114 (CSE 41, Lab 4).
+    36605 LAB 5   0   KAY, D.       MWF  12:00- 1:50p ICS 183    45   18/19     n/a  29   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16114 (CSE 41, Lab 5);  and 36115 (CSE 41, Lab 5).
+    36606 LAB 6   0   KAY, D.       MWF  12:00- 1:50p ICS 189    45     2/2     n/a   6   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16115 (CSE 41, Lab 6);  and 36116 (CSE 41, Lab 6).
+    36607 LAB 7   0   KAY, D.       MWF   2:00- 3:50p ICS 183    45     8/8     n/a  15   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16116 (CSE 41, Lab 7);  and 36117 (CSE 41, Lab 7).
+    36608 LAB 8   0   KAY, D.       MWF   2:00- 3:50p ICS 189    44     1/1     n/a   5   0      OPEN   
+                      STAFF                                                                             
+      ~ Same as 16117 (CSE 41, Lab 8);  and 36118 (CSE 41, Lab 8).
+    36609 LAB 9   0   KAY, D.       MWF   4:00- 5:50p ICS 183     0     0/0     n/a   1   0      FULL   
+                      STAFF                                                                             
+      ~ Same as 16118 (CSE 41, Lab 9);  and 36119 (CSE 41, Lab 9).
+    36610 LAB 10  0   KAY, D.       MWF   4:00- 5:50p ICS 192     0     0/0     n/a   2   0      FULL   
+                      STAFF                                                                             
+      ~ Same as 16119 (CSE 41, Lab 10);  and 36120 (CSE 41, Lab 10).
+    36611 LAB 11  0   KAY, D.       MWF   6:00- 7:50p ICS 192     0     0/0     n/a   0   0      FULL   
+                      STAFF                                                                             
+      ~ Same as 16120 (CSE 41, Lab 11);  and 36121 (CSE 41, Lab 11).
+
+I&C Sci  32        PROG SOFTWARE LIBR
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36620 LEC A   4   THORNTON, A.  TuTh  3:30- 4:50p ICS 174   130 117/123     n/a 143   0 A    OPEN   
+      ~ Same as 16130 (CSE 42, Lec A);  and 36150 (CSE 42, Lec A).
+    36621 LAB 1   0   THORNTON, A.  MWF   4:00- 5:50p ICS 183    44   42/44     n/a  45   0      FULL   
+      ~ Same as 16131 (CSE 42, Lab 1);  and 36151 (CSE 42, Lab 1).
+    36622 LAB 2   0   THORNTON, A.  MWF   4:00- 5:50p ICS 189    44   40/44     n/a  41   0      FULL   
+      ~ Same as 16132 (CSE 42, Lab 2);  and 36152 (CSE 42, Lab 2).
+    36623 LAB 4   0   THORNTON, A.  MWF   6:00- 7:50p ICS 183    42   35/35     n/a  34   0      OPEN   
+      ~ Same as 16133 (CSE 42, Lab 3);  and 36153 (CSE 42, Lab 3).
+
+I&C Sci  33        INTERMEDIATE PRGRMG
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36630 LEC A   4   PATTIS, R.    MWF   2:00- 2:50p ELH 100   176 109/118       0 124   0 A    OPEN   
+      ~ Same as 16140 (CSE 43, Lec A);  and 36170 (CSE 43, Lec A).
+    36631 LAB 1   0   PATTIS, R.    TuTh  9:00-10:50  ICS 183    44   31/34       0  28   0 A    OPEN   
+      ~ Same as 16141 (CSE 43, Lab 1);  and 36171 (CSE 43, Lab 1).
+    36632 LAB 2   0   PATTIS, R.    TuTh  9:00-10:50  ICS 189    44   20/20       0  21   0 A    OPEN   
+      ~ Same as 16142 (CSE 43, Lab 2);  and 36172 (CSE 43, Lab 2).
+    36633 LAB 3   0   PATTIS, R.    TuTh 11:00-12:50p ICS 183    44   37/42       0  38   0 A    OPEN   
+      ~ Same as 16143 (CSE 43, Lab 3);  and 36173 (CSE 43, Lab 3).
+    36634 LAB 4   0   PATTIS, R.    TuTh 11:00-12:50p ICS 189    44   21/22       0  22   0 A    OPEN   
+      ~ Same as 16144 (CSE 43, Lab 4);  and 36174 (CSE 43, Lab 4).
+
+I&C Sci  45C       PROGRAM IN C/C++
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36660 LEC A   4   THORNTON, A.  TuTh  6:30- 7:50p HSLH 100A 300 185/201      46 358 100 A&N  NewOnly
+      ~ Same as 16160 (CSE 45C, Lec A);  and 36200 (CSE 45C, Lec A).
+
+I&C Sci  45J       PROGRAMMING IN JAVA
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36680 LEC A   4   STAFF         MW    5:00- 6:20p DBH 1200   45      25       1  65  20 A&N  NewOnly
+    36681 LAB 1   0   STAFF         TuTh  1:00- 2:50p ICS 183    45      25       1  34  20 A    NewOnly
+    36682 LAB 2   0   STAFF         TuTh  5:00- 6:50p ICS 189     0       0     n/a   8   0 A    FULL   
+
+I&C Sci  51        INTRO COMPUTER ORG
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36700 LEC A   6   ALFARO, S.    TuTh  9:30-10:50  DBH 1100  200     100     n/a 188 100 A&N  NewOnly
+    36701 DIS 1   0   ALFARO, S.    W     5:00- 5:50p HSLH 100A 200     100     n/a 126   0 A    OPEN   
+    36711 LAB 1   0   ALFARO, S.    TuTh 11:00-12:50p ICS 192    40      36     n/a  44   0 A    OPEN   
+    36712 LAB 2   0   ALFARO, S.    TuTh  1:00- 2:50p ICS 192    40      24     n/a  28   0 A    OPEN   
+    36713 LAB 3   0   ALFARO, S.    TuTh  1:00- 2:50p ICS 189    45       5     n/a   7   0 A    OPEN   
+    36714 LAB 4   0   ALFARO, S.    TuTh  3:00- 4:50p ICS 189    45      35     n/a  43   0 A    OPEN   
+    36715 LAB 5   0   ALFARO, S.    TuTh  5:00- 6:50p ICS 192     0       0     n/a   1   0 A    FULL   
+
+I&C Sci  60        CMP GAMES & SOCIETY
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36730 LEC A   4   NARDI, B.     TuTh  2:00- 3:20p DBH 1100  220     122       0 136 100 A    NewOnly
+    36731 DIS 1   0   NARDI, B.     F    10:00-10:50  ET 202     60      38       0  38   0      OPEN   
+    36732 DIS 2   0   NARDI, B.     F     1:00- 1:50p ET 202     60      31       0  26   0      OPEN   
+    36733 DIS 3   0   NARDI, B.     F    12:00-12:50p DBH 1200   50      39       0  39   0      OPEN   
+    36734 DIS 4   0   NARDI, B.     F     3:00- 3:50p DBH 1300   50      14       0  12   0      OPEN   
+
+I&C Sci  80        PROGRAMMING INTRO
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36750 LEC A   4   KAY, D.       TuTh  8:00- 9:20  *TBA*       0       0     n/a   3   0 B    FULL   
+    36751 LAB 1   0   KAY, D.       MWF  10:00-11:50  ICS 183     0       0     n/a   0   0 B    FULL   
+    36752 LAB 2   0   KAY, D.       MWF  12:00- 1:50p ICS 183     0       0     n/a   0   0 B    FULL   
+    36753 LAB 3   0   KAY, D.       MWF   2:00- 3:50p ICS 183     0       0     n/a   0   0 B    FULL   
+
+I&C Sci  80        JAVA 2ND LANGUAGE
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36760 LEC A   4   STAFF         TuTh  5:00- 6:20p *TBA*       0       0     n/a   2   0 B    FULL   
+
+I&C Sci  90        NEW STUDENTS SEMINR
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36780 LEC A   1   PATTIS, R.    W     4:00- 5:20p HH 178    139       0      21  81 139 D&L  NewOnly
+                      KAY, D.                                                                           
+
+I&C Sci  139W      CRITICAL WRITING
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36800 LEC A   4   ALFARO, S.    TuTh 12:30- 1:50p ICS 180    50      20       2  93  30 J&N  NewOnly
+    36801 DIS 1   0   ALFARO, S.    W    10:00-10:50  ICS 225    25       7       1  20  18 J&A  NewOnly
+    36802 DIS 2   0   ALFARO, S.    W     1:00- 1:50p ICS 243    25      13       1  23  12 J&A  NewOnly
+    36810 LEC B   4   ALFARO, S.    TuTh 11:00-12:20p ICS 180    50      21       2  65  30 J&N  NewOnly
+    36811 DIS 1   0   ALFARO, S.    W    12:00-12:50p DBH 1427   25      12       1  28  14 J&A  NewOnly
+    36812 DIS 2   0   ALFARO, S.    W     2:00- 2:50p DBH 1431   25       9       1  23  16 J&A  NewOnly
+
+I&C Sci  166       GAME DESIGN
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36830 LEC A   4   STAFF         Tu    7:00- 9:50p DBH 1500   50      40       0  63   0 A    OPEN   
+
+I&C Sci  192       INDUS/PBLC FLD STDY
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36840 FLD A   2   GIVARGIS, T.  *TBA*             *TBA*      20       0     n/a   3   0 B&D  OPEN   
+
+I&C Sci  193       TUTORING IN ICS
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36850 LEC A   2   KAY, D.       Tu    3:30- 4:50p DBH 1423   30       0     n/a   6   0 B    OPEN   
+                      PATTIS, R.                                                                        
+
+I&C Sci  H197      HONORS SEMINAR
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36870 LEC A   2   LATHROP, R.   W    10:00-10:50  ICS 259    15       0     n/a   4   0 B&D  OPEN   
+                                    F    10:00-10:50  *TBA*                                             
+
+I&C Sci  398A      TA TRAINING SEMINAR
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36990 SEM A   2   KAY, D.       F     1:00- 2:50p ICS 180    55      10       0  10   0 S    OPEN   
+
+I&C Sci  399       UNIVERSITY TEACHING
+    CCode Typ Sec Unt Instructor    Time              Place     Max     Enr      WL Req Nor Rstr Status 
+    36995 TUT A   4   GIVARGIS, T.  *TBA*             *TBA*     999       6       0   5   0      OPEN   
+
+
+*** Total Classes Displayed: 68
+    Values in the "Enr" column like "25/25" show "section / joint" enrollment
+	totals for cross-listed courses.
+    The column headings above are defined at:
+	    http://webster.reg.uci.edu/help/WebSoc-Columns.shtml
+    Course textbooks link:
+	    http://book.uci.edu/
+    Building Abbreviations:
+	    http://www.reg.uci.edu/uci/rooms
+    Campus map:
+	    http://www.uci.edu/campusmap
+
+Restriction Codes from the 'Rst' column above:
+    A: Prerequisite required
+    B: Authorization required
+    D: Pass/not pass option only
+    J: Upper-division only
+    L: Major only
+    N: School major only
+    S: Satisfactory/unsatisfactory only

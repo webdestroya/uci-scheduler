@@ -8,6 +8,7 @@ en:
         term: Quarter
         days: Allowed Days
         status_list: Allowed Statuses
+        statuses: Allowed Statuses
         earliest_time: No Earlier
         latest_time: No Later
         required_ccodes: Required Sections

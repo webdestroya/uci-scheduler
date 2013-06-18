@@ -9,6 +9,10 @@ class Search < ActiveRecord::Base
   has_many :search_courses, dependent: :destroy
   accepts_nested_attributes_for :search_courses, reject_if: proc {|a| a['course_num'].blank?}
 
+  validates_presence_of :statuses
+
+  validates_format_of :required_ccodes, with: /^[0-9, ]+$/, allow_blank: true
+
   def days
     day_arr = []
     day_arr << 'M' if self.monday?
@@ -43,10 +47,12 @@ class Search < ActiveRecord::Base
   end
 
   def earliest_time
+    return nil if self.start_time.nil?
     self.start_time.strftime('%l:%M%P').strip
   end
 
   def latest_time
+    return nil if self.end_time.nil?
     self.end_time.strftime('%l:%M%P').strip
   end
 
@@ -59,19 +65,36 @@ class Search < ActiveRecord::Base
     self.statuses = statuslist.join(',')
   end
 
+  # returns an array of required sections
+  def req_sections
+    return [] if self.required_ccodes.empty?
+
+    self.required_ccodes.split(/[^0-9]/).map(&:strip).map(&:to_i)
+  end
 
 
-  # def search_courses
-  #   test = SearchCourse.new
-  #   test.dept = 5
-  #   [
-  #     test, test
-  #   ]
-  # end
+  def schedules
+    @schedules ||= calc_schedules
+  end
 
-  # def search_course_attributes=(attrs)
-  #   puts attrs.inspect
-  # end
+  def calc_schedules
+    course_scheds = self.search_courses.map(&:schedules)
+    scheds = nil
+    if course_scheds.size == 1
+      scheds = [course_scheds.first.flatten]
+    elsif course_scheds.size > 1
+      first_course = course_scheds.shift
+      scheds = [first_course].product(*course_scheds).map(&:flatten)
+    end
+
+    return [] if scheds.nil?
+
+    scheds.collect! do |sched|
+      PossibleSchedule.new self, sched
+    end
+
+    scheds.select{|s|s.valid?}
+  end
 
   def self.day_list
     [

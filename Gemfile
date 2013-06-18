@@ -23,6 +23,8 @@ group :assets do
 
   gem 'bootstrap-sass', '~> 2.3.1.0'
 
+  gem "jquery-week-calendar", "~> 0.1"
+
   # Synchronizes assets to S3
   gem 'asset_sync'
 end

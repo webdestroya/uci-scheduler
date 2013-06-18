@@ -1,65 +1,87 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Term:</b>
-  <%= @search.term_id %>
-</p>
-
-<p>
-  <b>Start time:</b>
-  <%= @search.start_time %>
-</p>
-
-<p>
-  <b>End time:</b>
-  <%= @search.end_time %>
-</p>
-
-<p>
-  <b>Monday:</b>
-  <%= @search.monday %>
-</p>
-
-<p>
-  <b>Tuesday:</b>
-  <%= @search.tuesday %>
-</p>
-
-<p>
-  <b>Wednesday:</b>
-  <%= @search.wednesday %>
-</p>
-
-<p>
-  <b>Thursday:</b>
-  <%= @search.thursday %>
-</p>
-
-<p>
-  <b>Friday:</b>
-  <%= @search.friday %>
-</p>
-
-<p>
-  <b>Saturday:</b>
-  <%= @search.saturday %>
-</p>
-
-<p>
-  <b>Sunday:</b>
-  <%= @search.sunday %>
-</p>
-
-<p>
-  <b>Statuses:</b>
-  <%= @search.statuses %>
-</p>
-
-<p>
-  <b>Courses list:</b>
-  <%= @search.courses_list %>
-</p>
+<% title "Possible Schedules" %>
+<% content_for :page_heading do %>
+<h1>Possible Schedules
+  <small>(<%= link_to 'edit search', edit_search_path(@search) %>)</small>
+</h1>
+<% end %>
 
 
-<%= link_to 'Edit', edit_search_path(@search) %> |
-<%= link_to 'Back', searches_path %>
+
+<h3>Search Criteria</h3>
+<dl class="dl-horizontal">
+  <dt>Quarter</dt>
+  <dd><%= @search.term.name %></dd>
+
+  <dt>Earliest Time Allowed</dt>
+  <dd>
+    <% if @search.earliest_time %>
+      <%= @search.earliest_time %>
+    <% else %>
+      No restriction
+    <% end %>
+  </dd>
+
+  <dt>Latest Time Allowed</dt>
+  <dd>
+     <% if @search.latest_time %>
+      <%= @search.latest_time %>
+    <% else %>
+      No restriction
+    <% end %>
+  </dd>
+
+  <dt>Days Allowed</dt>
+  <dd><%= @search.days.join(', ') %></dd>
+
+  <dt>Statuses Allowed</dt>
+  <dd>
+    <% if @search.status_list %>
+      <%= @search.status_list.join(', ') %>
+    <% else %>
+      <%= @search.status_list.join(', ') %>
+    <% end %>
+  </dd>
+
+  <dt>Required Sections</dt>
+  <dd>
+    <% if @search.req_sections.empty? %>
+    <em>None</em>
+    <% else %>
+    <ul class="unstyled">
+      <%= render Course.where(term_id: @search.term_id).where(ccode: @search.req_sections) %>
+    </ul>
+    <% end %>
+  </dd>
+
+  <dt>Courses</dt>
+  <dd>
+    <ul class="unstyled">
+      <% @search.search_courses.each do |search_course| %>
+      <li><%= search_course.to_s %></li>
+      <% end %>
+    </ul>
+  </dd>
+
+</dl>
+
+
+<% if @search.schedules.empty? %>
+<div class="alert alert-error">
+Sorry, but it doesn't look like we found any possible schedule combinations that met your criteria.
+<br/>
+<br/>
+Perhaps you should <%= link_to 'broaden your search', edit_search_path(@search) %>.
+</div>
+<% else %>
+
+<h3>Results</h3>
+<div class="alert alert-info">
+Below are the possible schedules based on your search criteria. To view a schedule, click the list of course codes.
+</div>
+
+<ul>
+<% @search.schedules.each do |sched| %>
+<li><%= link_to sched.ccodes.join(', '), schedule_path(term_code: @search.term.code, ccodes: sched.ccodes.join(',')) %></li>
+<% end %>
+</ul>
+<% end %>

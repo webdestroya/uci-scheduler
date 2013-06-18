@@ -14,6 +14,7 @@ class SearchesController < ApplicationController
   # GET /searches/1.json
   def show
     @search = Search.find(params[:id])
+    session[:search_id] = @search.id
   end
 
   # GET /searches/new
@@ -43,6 +44,7 @@ class SearchesController < ApplicationController
     if @search.save
       redirect_to @search, notice: 'Search was successfully created.'
     else
+      5.times { @search.search_courses.build }
       render action: "new"
     end
   end

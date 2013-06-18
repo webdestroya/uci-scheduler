@@ -1,7 +1,12 @@
 <% title "View Schedule" %>
 <% content_for :page_heading do %>
 <h1>View Schedule
-  <small>BLAH</small>
+  <small>
+    <% if @search %>
+      <%= link_to "Back to possible schedules", @search %>
+    <% else %>
+      <%= link_to "Build a schedule!", new_search_path %>
+    <% end %></small>
 </h1>
 <% end %>
 
@@ -26,14 +31,22 @@
   <td><%= course.type %></td>
   <td><%= course.teacher %></td>
   <td><% if course.building %>
-    <%= course.building.abbr %> <%= course.room %>
+    <%= link_to course.building.abbr, "https://eee.uci.edu/toolbox/roomfinder/room.php?building_abbr=#{course.building.abbr}" %> <%= course.room %>
     <% else %>
     TBA
     <% end %>
   </td>
   <td><%= course.days %> <%= course.meeting_time %></td>
-  <td><%= course.status %></td>
+  <td><span class="status-<%= course.status.downcase %>"><%= course.status %></span></td>
 </tr>
 <% end %>
 </tbody>
 </table>
+
+<script>
+var CALENDAR_JSON = <%= @calendar_info.to_json.html_safe %>;
+</script>
+
+<h3>Weekly Calendar</h3>
+
+<div id="calendar"></div>

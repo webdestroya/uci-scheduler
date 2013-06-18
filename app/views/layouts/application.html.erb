@@ -5,6 +5,10 @@
   <title><%= content_for?(:title) ? yield(:title) : "Home" %> | UCI Scheduler</title>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
+
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" %>
+
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
@@ -63,17 +67,19 @@
 <div class="clear"></div>
 
 <footer>
+  <div class="container">
   <aside>&nbsp;</aside>
   <div class="noprint row-fluid">
     <div class="span4">
-      <b>MitchDB Player Database, MitchDB.com</b>
+      <b>UCI Scheduler</b>
     </div>
     <div class="span4" style="text-align:center;">
-      Copyright &copy; <%= Time.now.year %> <a href="http://www.mitchdempsey.com/?utm_source=mitchdb&utm_medium=website&utm_campaign=footer">Mitch Dempsey</a>
+      by <a href="http://www.mitchdempsey.com/?utm_source=ucischeduler&utm_medium=website&utm_campaign=footer">Mitch Dempsey</a>
       <br/>All rights reserved.
     </div>
     <div class="span4">&nbsp;</div>
   </div>
+</div>
 </footer>
 
 

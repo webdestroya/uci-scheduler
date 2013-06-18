@@ -76,8 +76,8 @@ class CourseParser
     course.days = r[:days]
     course.building = Building.find_by_abbr(r[:bldg])
 
-    course.start_time = Chronic.parse r[:start]
-    course.end_time = Chronic.parse r[:end]
+    course.start_time = Chronic.parse r[:start], ambiguous_time_range: 8
+    course.end_time = Chronic.parse r[:end], ambiguous_time_range: 8
 
     unless @has_parent_set
       @g_parent = course.type

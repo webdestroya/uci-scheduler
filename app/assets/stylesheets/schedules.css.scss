@@ -1,3 +1,11 @@
 // Place all the styles related to the schedules controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#calendar {
+  .wc-toolbar {display:none;}
+}
+.status-open {color: #090;}
+.status-waitl {color: #f00;}
+.status-full {color: #000;}
+.status-newonly {color: #0000ee;}

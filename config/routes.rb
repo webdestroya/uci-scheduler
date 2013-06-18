@@ -2,7 +2,7 @@ UciScheduler::Application.routes.draw do
 
   
 
-  resources :searches
+  resources :searches, except: [:index]
 
 
   get "contact", to: 'pages#contact', as: :contact

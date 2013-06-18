@@ -43,9 +43,34 @@ class Course < ActiveRecord::Base
     self.start_time.strftime("%l:%M%P") + "-" + self.end_time.strftime("%l:%M%P")
   end
 
-
   def self.inheritance_column
     nil
+  end
+
+  def to_s
+    "Course<##{self.id}><#{self.department.code}><#{self.course_num}><#{self.type}>[#{self.ccode}]"
+  end
+
+  def to_calendar_json
+    cal_days = []
+
+    self.day_list.each do |day|
+
+      start_time_base = self.start_time.advance days: 2
+      end_time_base = self.end_time.advance days: 2
+
+      advance_amount = %w(M Tu W Th F Sa Su).index(day)
+      
+      cal_days << {
+        id: "#{self.ccode}#{day.downcase}",
+        groupId: "#{self.ccode}",
+        title: "#{self.department.code} #{self.course_num}<br>(#{self.ccode})",
+        start: start_time_base.advance(days: advance_amount),
+        end: end_time_base.advance(days: advance_amount)
+      }
+    end
+
+    cal_days
   end
 
 

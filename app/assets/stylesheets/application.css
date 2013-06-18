@@ -11,4 +11,6 @@
  *= require bootstrap
  *= require pages
  *= require searches
+ *= require jquery-week-calendar
+ *= require schedules
  */

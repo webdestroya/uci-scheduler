@@ -1,3 +1,8 @@
 <% title "Editing Search" %>
+<% content_for :page_heading do %>
+<h1>Editing Schedule Search
+  <small>(<%= link_to 'new search', new_search_path %>)</small>
+</h1>
+<% end %>
 
 <%= render 'form' %>

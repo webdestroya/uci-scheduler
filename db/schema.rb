@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613235255) do
+ActiveRecord::Schema.define(:version => 20130618234521) do
 
   create_table "buildings", :force => true do |t|
     t.string   "abbr",       :null => false
@@ -54,10 +54,13 @@ ActiveRecord::Schema.define(:version => 20130613235255) do
   add_index "courses", ["term_id", "ccode"], :name => "index_courses_on_term_id_and_ccode", :unique => true
 
   create_table "departments", :force => true do |t|
-    t.string "code", :null => false
-    t.string "name", :null => false
+    t.string  "code",                      :null => false
+    t.string  "name",                      :null => false
+    t.boolean "active", :default => true,  :null => false
+    t.boolean "large",  :default => false, :null => false
   end
 
+  add_index "departments", ["active"], :name => "index_departments_on_active"
   add_index "departments", ["code"], :name => "index_departments_on_code", :unique => true
 
   create_table "search_courses", :force => true do |t|

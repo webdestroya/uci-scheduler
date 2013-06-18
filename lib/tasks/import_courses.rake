@@ -5,6 +5,11 @@ namespace :import do
 
 desc "Import courses"
 task :courses => :environment do
+  Department.active.each do |dept|
+    # puts "#{dept.id} #{dept.code} #{dept.name}"
+    Rake::Task["import:dept_courses"].invoke(dept.code)
+    Rake::Task["import:dept_courses"].reenable
+  end
 end
 
 

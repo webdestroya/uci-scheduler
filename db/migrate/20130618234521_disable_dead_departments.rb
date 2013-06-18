@@ -1,11 +1,13 @@
 class DisableDeadDepartments < ActiveRecord::Migration
   def up
-    Department.find_by_code("ENVIRON").disable!
-    Department.find_by_code("RAD SCI").disable!
+    Department.where(code: ["ENVIRON", "RAD SCI"]).each do |dep|
+      dep.disable!
+    end
   end
 
   def down
-    Department.find_by_code("ENVIRON").enable!
-    Department.find_by_code("RAD SCI").enable!
+    Department.where(code: ["ENVIRON", "RAD SCI"]).each do |dep|
+      dep.enable!
+    end
   end
 end

@@ -1,14 +1,4 @@
 class SearchesController < ApplicationController
-  # GET /searches
-  # GET /searches.json
-  def index
-    @searches = Search.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @searches }
-    end
-  end
 
   # GET /searches/1
   # GET /searches/1.json
@@ -26,7 +16,7 @@ class SearchesController < ApplicationController
     @search.end_time = Chronic.parse("11:00pm")
     @search.status_list = %w(OPEN Waitl NewOnly)
 
-    10.times { @search.search_courses.build }
+    6.times { @search.search_courses.build }
 
   end
 
@@ -56,14 +46,11 @@ class SearchesController < ApplicationController
 
     @search.search_courses.destroy_all
 
-    respond_to do |format|
-      if @search.update_attributes(search_params)
-        format.html { redirect_to @search, notice: 'Search was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @search.errors, status: :unprocessable_entity }
-      end
+    if @search.update_attributes(search_params)
+      redirect_to @search, notice: 'Search was successfully updated.'
+    else
+      5.times { @search.search_courses.build }
+      render action: "edit"
     end
   end
 
@@ -73,10 +60,7 @@ class SearchesController < ApplicationController
     @search = Search.find(params[:id])
     @search.destroy
 
-    respond_to do |format|
-      format.html { redirect_to searches_url }
-      format.json { head :no_content }
-    end
+    redirect_to new_search_url
   end
 
   private

@@ -74,7 +74,7 @@ class Search < ActiveRecord::Base
 
 
   def schedules
-    @schedules ||= calc_valid_schedules.sort{|a, b| a.ranking <=> b.ranking}.first(50)
+    @schedules ||= calc_valid_schedules.sort{|a, b| a.ranking <=> b.ranking}
   end
 
   def calc_valid_schedules

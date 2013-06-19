@@ -7,4 +7,8 @@ $(document).ready ->
     event.preventDefault()
     $("tr.sched-details-row").toggle()
     return
+
+  # if $(".course-search-row select").length > 0
+  #   $(".course-search-row select").select2()
+
   return

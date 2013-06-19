@@ -53,11 +53,11 @@
         <%= c.input_field :department_id,
           as: :select,
           collection: Department.order('LOWER(code) ASC').all,
-          prompt: 'Select a Department',
+          prompt: 'Department',
           label_method: :code,
           class: 'span3'
           %>
-        <%= c.input_field :course_num, class: 'span1' %>
+        <%= c.input_field :course_num, class: 'span2', placeholder: 'Course Num' %>
         <% if c.object.course_num %>
         <span class="help-inline">
           <%= c.object %>
@@ -69,6 +69,6 @@
       <% end %>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn-primary btn-large' %>
   </div>
 <% end %>

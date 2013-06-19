@@ -25,6 +25,8 @@ group :assets do
 
   gem "jquery-week-calendar", "~> 0.1"
 
+  # gem 'select2-rails'
+
   # Synchronizes assets to S3
   gem 'asset_sync'
 end

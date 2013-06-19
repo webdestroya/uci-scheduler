@@ -12,9 +12,6 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <%#= favicon_link_tag 'favicon.ico' %>
-
-
 </head>
 <body id="pagebody">
 <!--[if lt IE 7]>
@@ -35,6 +32,10 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><%= link_to 'Make Schedule', new_search_path %></li>
+            </ul>
+
+            <ul class="nav pull-right">
+              <li><%= link_to 'Bugs', 'https://github.com/webdestroya/uci-scheduler/issues' %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

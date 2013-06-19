@@ -93,6 +93,10 @@ class Search < ActiveRecord::Base
 
     return [] if scheds.nil?
 
+    # scheds.uniq! do |sched|
+    #   sched.map(&:ccode).sort
+    # end
+
     scheds.collect! do |sched|
       PossibleSchedule.new self, sched
     end

@@ -12,5 +12,13 @@
 //
 //= OFFrequire jquery
 //= OFFrequire jquery_ujs
+//
+//= require bootstrap-tooltip
+//= require bootstrap-popover
+//= OFFrequire bootstrap-typeahead
+//
 //= require jquery-week-calendar
+//
+//= OFFrequire select2
+//
 //= require_tree .

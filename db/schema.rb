@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618234521) do
+ActiveRecord::Schema.define(:version => 20130619182218) do
 
   create_table "buildings", :force => true do |t|
     t.string   "abbr",       :null => false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130618234521) do
 
   add_index "courses", ["course_num"], :name => "index_courses_on_course_num"
   add_index "courses", ["department_id"], :name => "index_courses_on_department_id"
+  add_index "courses", ["parent_course_id"], :name => "index_courses_on_parent_course_id"
   add_index "courses", ["status"], :name => "index_courses_on_status"
   add_index "courses", ["term_id", "ccode"], :name => "index_courses_on_term_id_and_ccode", :unique => true
 

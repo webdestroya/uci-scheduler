@@ -42,7 +42,7 @@ class SearchCourse < ActiveRecord::Base
 
       [course].product(*types.values)
     end
-
+    
     sched_list.flatten(1)
   end
 

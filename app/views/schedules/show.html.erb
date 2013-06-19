@@ -27,11 +27,11 @@
 <% @courses.each do |course| %>
 <tr>
   <td><%= course.department.code %> <%= course.course_num %></td>
-  <td><%= course.ccode %></td>
+  <td><%= course.pretty_ccode %></td>
   <td><%= course.type %></td>
   <td><%= course.teacher %></td>
   <td><% if course.building %>
-    <%= link_to course.building.abbr, "https://eee.uci.edu/toolbox/roomfinder/room.php?building_abbr=#{course.building.abbr}" %> <%= course.room %>
+    <%= link_to course.building.abbr, course.building.finder_url %> <%= course.room %>
     <% else %>
     TBA
     <% end %>
@@ -47,6 +47,6 @@
 var CALENDAR_JSON = <%= @calendar_info.to_json.html_safe %>;
 </script>
 
-<h3>Weekly Calendar</h3>
+<h3>Calendar View</h3>
 
 <div id="calendar"></div>

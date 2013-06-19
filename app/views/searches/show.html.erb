@@ -7,7 +7,7 @@
 
 
 
-<h3>Search Criteria</h3>
+<h3>Search Criteria <small>(<%= link_to 'edit', edit_search_path(@search) %>)</small></h3>
 <dl class="dl-horizontal">
   <dt>Quarter</dt>
   <dd><%= @search.term.name %></dd>
@@ -34,13 +34,7 @@
   <dd><%= @search.days.join(', ') %></dd>
 
   <dt>Statuses Allowed</dt>
-  <dd>
-    <% if @search.status_list %>
-      <%= @search.status_list.join(', ') %>
-    <% else %>
-      <%= @search.status_list.join(', ') %>
-    <% end %>
-  </dd>
+  <dd><%= statuses @search.status_list %></dd>
 
   <dt>Required Sections</dt>
   <dd>
@@ -74,14 +68,41 @@ Perhaps you should <%= link_to 'broaden your search', edit_search_path(@search) 
 </div>
 <% else %>
 
-<h3>Results</h3>
 <div class="alert alert-info">
 Below are the possible schedules based on your search criteria. To view a schedule, click the list of course codes.
 </div>
 
-<ul>
+<h3>Results <small><%= pluralize @search.schedules.size, 'possible schedule' %>
+(<a href="#details" class="search-details-toggle">Detailed View</a>)
+</small></h3>
+
+<table class="table table-bordered table-hover table-condensed" id="section_list">
+<thead>
+  <tr>
+    <th>Section Codes</th>
+    <th>Statuses</th>
+    <th>Longest Day</th>
+  </tr>
+</thead>
+<tbody>
 <% @search.schedules.each do |sched| %>
-<li><%= link_to sched.ccodes.join(', '), schedule_path(term_code: @search.term.code, ccodes: sched.ccodes.join(',')) %></li>
+<tr data-ranking="<%= sched.ranking %>">
+  <td><%= link_to sched.pretty_ccodes.join(', '), schedule_path(term_code: @search.term.code, ccodes: sched.pretty_ccodes.join(',')) %></td>
+  <td nowrap="nowrap"><%= statuses sched.statuses %></td>
+  <td nowrap="nowrap"><%= longest_day sched %></td>
+</tr>
+<tr class="sched-details-row" style="display:none;">
+  <td colspan="5">
+    <div class="sched-details">
+      <dl class="dl-horizontal">
+        <dt>Professors:</dt>
+        <dd><%= sched.teachers.join(', ') %></dd>
+      </dl>
+    </div>
+  </td>
+</tr>
 <% end %>
-</ul>
+</tbody>
+</table>
+
 <% end %>

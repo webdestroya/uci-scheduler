@@ -74,17 +74,21 @@ class Search < ActiveRecord::Base
 
 
   def schedules
-    @schedules ||= calc_schedules
+    @schedules ||= calc_valid_schedules.sort{|a, b| a.ranking <=> b.ranking}.first(50)
+  end
+
+  def calc_valid_schedules
+    self.calc_schedules.select{|s|s.valid?}
   end
 
   def calc_schedules
     course_scheds = self.search_courses.map(&:schedules)
     scheds = nil
     if course_scheds.size == 1
-      scheds = [course_scheds.first.flatten]
+      scheds = course_scheds.first
     elsif course_scheds.size > 1
       first_course = course_scheds.shift
-      scheds = [first_course].product(*course_scheds).map(&:flatten)
+      scheds = first_course.product(*course_scheds).map(&:flatten)
     end
 
     return [] if scheds.nil?
@@ -93,7 +97,7 @@ class Search < ActiveRecord::Base
       PossibleSchedule.new self, sched
     end
 
-    scheds.select{|s|s.valid?}
+    scheds
   end
 
   def self.day_list
